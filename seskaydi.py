@@ -2,7 +2,7 @@ import sounddevice as sd
 import numpy as np
 from scipy.io.wavfile import write
 
-def record_audio(duration, fs=48000, filename="output.wav"):
+def record_audio(duration, fs=16000, filename="output.wav"):
     """
     Mikrofondan belirtilen süre ve frekansta ses kaydı alır.
     
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     dosya_ismi = "ornek_kayit.wav"
     
     try:
-        record_audio(duration=kayit_suresi, fs=48000, filename=dosya_ismi)
+        record_audio(duration=kayit_suresi, fs=16000, filename=dosya_ismi)
     except Exception as e:
         print(f"❌ Bir hata oluştu: {e}")
         print("Lütfen mikrofonunuzun bağlı olduğundan ve mikrofon erişim izninizin olduğundan emin olun.")
